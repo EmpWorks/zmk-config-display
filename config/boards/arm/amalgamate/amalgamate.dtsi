@@ -107,10 +107,8 @@
 &spi1 {
 	status = "okay";
 	compatible = "nordic,nrf-spim";
-	sck-pin = <17>;
-	mosi-pin = <15>;
-	miso-pin = <22>;
-	cs-gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+	
+	cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
  
 	il0323@0 {
 		compatible = "gooddisplay,il0323";
@@ -121,7 +119,7 @@
 		height = <128>;
 		dc-gpios = <&gpio0 8 GPIO_ACTIVE_LOW>;
 		reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
-		busy-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+		busy-gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
 		cdi = <0xd2>;
 		tcon = <0x22>;
 		pwr = [03 00 26 26];
