@@ -107,7 +107,9 @@
 &spi1 {
 	status = "okay";
 	compatible = "nordic,nrf-spim";
-	
+	sck-pin = <28>;
+	mosi-pin = <25>;
+	miso-pin = <22>;
 	cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
  
 	il0323@0 {
